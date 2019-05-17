@@ -6,7 +6,7 @@
 		<link href="http://www.8848phone.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/top.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/M5-1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/M5-1.min.css" />
 	</head>
 	<body>
 		<div class="M-header">
@@ -22,7 +22,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="M5"></div>
+		<div class="M52">
+
+		</div>
 		<div class="M-footer">
 			<div class="foot-nav">
 				<div class="row clear">
@@ -55,5 +57,21 @@
 		</div>
 		<script src="js/top.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/M5-1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type: "get",
+				url: "json/4.json",
+				async: false,
+				success: function(data) {
+					$.each(data.M52img, function(i, v) {
+						$("<div>").addClass("m5-elite-" + i).css({
+							"width": "100%",
+							"height": parseInt(data.M52hei[i]),
+							"background": "url(" + v + ") top center no-repeat"
+						}).appendTo(".M52")
+					})
+				}
+			})
+		</script>
 	</body>
 </html>
