@@ -6,7 +6,7 @@
 		<link href="http://www.8848phone.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/top.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/M5-1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/M5.min.css" />
 		<style type="text/css">
 			.conent {
 				width: 1200px;
@@ -59,22 +59,22 @@
 			</div>
 		</div>
 		<script src="js/top.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/M5-1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/M5.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$.ajax({
 				type: "get",
-				url: "json/3.json",
+				url: "json/list1.json",
 				async: false,
 				success: function(data) {
-					$.each(data.M51img, function(i, v) {
+					$.each(data.M5img, function(i, v) {
 						$("<div>").addClass("m5-ruizhi-" + i).css({
 							"width": "100%",
-							"height": parseInt(data.M51hei[i]),
+							"height": parseInt(data.M5hei[i]),
 							"background": "url(" + v + ") top center no-repeat"
 						}).appendTo(".M51")
 					})
 					$("<div class='conent'>").appendTo(".m5-ruizhi-6")
-					$("<a class='buy-btn'>").attr("href", "https://item.jd.com/39850493647.html").html("立即订购").appendTo(".conent")
+					$("<a class='buy-btn'>").attr("href", data.M5buy).html("立即订购").appendTo(".conent")
 					$(".buy-btn").hover(function() {
 						$(this).css("opacity", 0.8)
 					}, function() {

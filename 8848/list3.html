@@ -6,7 +6,7 @@
 		<link href="http://www.8848phone.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/top.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/M5-1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/M5.min.css" />
 		<style type="text/css">
 			.M53 {
 				padding: 0 5%;
@@ -111,21 +111,21 @@
 			</div>
 		</div>
 		<script src="js/top.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/M5-1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/M5.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$.ajax({
 				type: "get",
-				url: "json/5.json",
+				url: "json/list3.json",
 				async: false,
 				success: function(data) {
-					$.each(data.M53img, function(i, v) {
+					$.each(data.M5img, function(i, v) {
 						$("<div>").addClass("P1").appendTo(".M53")
 						$("<img>").attr("src", v).appendTo($(".P1").eq(i))
 					})
 					$(".P1").eq(0).css("position", "relative")
 					$("<div class='carousel-inner'>").html($("<ul class='lai' style='display:block;'>")).appendTo($(".P1").eq(0))
 					$("<div class='carousel-indicators'>").appendTo($(".P1").eq(0))
-					$.each(data.M51lbt, function(i, v) {
+					$.each(data.M5lbt, function(i, v) {
 						$("<li class='picbo1'>").html($("<img>").attr({
 							"src": v,
 							"width": "100%",
@@ -197,9 +197,9 @@
 								left: -i * $(".picbo1").width()
 							}, 500)
 							$(".opb1").eq(i).css("background", "url(" + data.M5lbtd[1] + ")")
-						}, 2000)
+						}, 3000)
 					}
-					$("<div class='ErWeiMa'>").html($("<a href='https://item.jd.com/40232483679.html'>")).appendTo(".P1:last")
+					$("<div class='ErWeiMa'>").html($("<a href="+data.M5buy+">")).appendTo(".P1:last")
 				}
 			})
 		</script>
