@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>8848钛金手机官网</title>
@@ -9,17 +10,18 @@
 		<link rel="stylesheet" type="text/css" href="css/N5.min.css" />
 		<style type="text/css">
 			.conent {
-				height: 696px;
+				height: 767px;
 			}
 			
 			.buy-btn {
 				width: 196px;
 				height: 67px;
-				left: 756px;
-				top: 349px;
+				left: 659.5px;
+				top: 387.5px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<div class="M-header">
 			<div class="row">
@@ -34,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="N52"></div>
+		<div class="N53"></div>
 		<div class="M-footer">
 			<div class="foot-nav">
 				<div class="row clear">
@@ -64,20 +66,21 @@
 		<script type="text/javascript">
 			$.ajax({
 				type: "get",
-				url: "json/news2.json",
+				url: "json/news3.json",
 				async: false,
 				success: function(data) {
 					$.each(data.N5img, function(i, v) {
-						$("<div>").addClass("n5-parts-wcp-" + i).css({
+						$("<div>").addClass("n5-parts-keychain-" + i).css({
 							"width": "100%",
 							"height": parseInt(data.N5hei[i]),
 							"background": "url(" + v + ") top center no-repeat"
-						}).appendTo(".N52")
+						}).appendTo(".N53")
 					})
-					$("<div class='conent'>").appendTo(".n5-parts-wcp-7")
+					$("<div class='conent'>").appendTo(".n5-parts-keychain-6")
 					$("<a class='buy-btn'>").attr("href", data.N5buy).appendTo(".conent")
 				}
 			})
 		</script>
 	</body>
+
 </html>
