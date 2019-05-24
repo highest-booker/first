@@ -6,7 +6,23 @@
 		<link href="http://www.8848phone.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/top.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/N5.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/N5.min.css" />
+		<style type="text/css">
+			.conent {
+				position: relative;
+				margin: 0 auto;
+				width: 1200px;
+				height: 696px;
+			}
+			
+			.buy-btn {
+				position: absolute;
+				width: 196px;
+				height: 67px;
+				left: 756px;
+				top: 349px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="M-header">
@@ -22,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="N51"></div>
+		<div class="N52"></div>
 		<div class="M-footer">
 			<div class="foot-nav">
 				<div class="row clear">
@@ -52,19 +68,20 @@
 		<script type="text/javascript">
 			$.ajax({
 				type: "get",
-				url: "json/news1.json",
+				url: "json/news2.json",
 				async: false,
 				success: function(data) {
 					$.each(data.N5img, function(i, v) {
-						$("<div>").addClass("n5-parts-dragon-" + i).css({
+						$("<div>").addClass("n5-parts-wcp-" + i).css({
 							"width": "100%",
 							"height": parseInt(data.N5hei[i]),
 							"background": "url(" + v + ") top center no-repeat"
-						}).appendTo(".N51")
-					});
-					$("<div class='conent'>").html($("<a href="+data.N5buy+" class='buy-btn'>")).appendTo(".n5-parts-dragon-2")
+						}).appendTo(".N52")
+					})
+					$("<div class='conent'>").appendTo(".n5-parts-wcp-7")
+					$("<a class='buy-btn'>").attr("href", data.N5buy).appendTo(".conent")
 				}
-			});
+			})
 		</script>
 	</body>
 </html>
