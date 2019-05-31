@@ -11,9 +11,9 @@
 	"href": [
 		"index.html",
 		"list.html",
-		"http://www.8848phone.com/m5/custom",
+		"contact.html",
 		"javascript:;",
-		"http://www.8848phone.com/m3/news/all",
+		"all.html",
 		"javascript:void(0);",
 		"http://www.8848phone.com/en"
 	],
@@ -113,7 +113,7 @@
 		"http://www.8848phone.com/public/m3/images/p3.jpg"
 	],
 	"tblj1": [
-		"http://www.8848phone.com/m3/news/all",
+		"all.html",
 		"http://www.8848phone.com/m3/brand/2",
 		"http://www.8848phone.com/m3/introduction"
 	],
@@ -147,5 +147,6 @@
 	"zdxx": [
 		"立即体验",
 		"400-168-8848"
-	]
+	],
+	"zhtb":"http://www.8848phone.com/public/m3/images/qrcode.jpg"
 }
