@@ -47,6 +47,23 @@
 				<div class="customer-qrcode"> <img src="http://www.8848phone.com/public/m3/images/customer_qrcode.png?ver=2"> </div>
 			</div>
 		</div>
+		<div class="gray-bg"></div>
+		<div class="denglu">
+			<div class="inset">
+				<div class="login-head">
+					<h1>登录</h1>
+					<div class="close"></div>
+				</div>
+				<div class="indi">
+					<input maxlength="8" placeholder="账号" autofocus>
+				</div>
+				<div class="indi">
+					<input maxlength="10" type="password" placeholder="密码">
+				</div>
+				<button class="wwc lll">登录</button>
+				<button class="wwc ccc">注册</button>
+			</div>
+		</div>
 		<script src="js/top.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/N5.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
@@ -56,13 +73,11 @@
 				async: false,
 				success: function(data) {
 					$.each(data.N5img, function(i, v) {
-						$("<div>").addClass("n5-parts-" + i).css({
-							"width": "100%",
-							"height": parseInt(data.N5hei[i]),
-							"background": "url(" + v + ") top center no-repeat"
-						}).appendTo(".N5")
+						$("<div>").addClass("n5-parts-" + i).css({"width": "100%","height": parseInt(data.N5hei[i]),"background": "url(" + v + ") top center no-repeat"}).appendTo(".N5")
 					});
-					$("<div class='conent'>").html($("<a href="+data.N5buy+" class='buy-btn'>")).appendTo(".n5-parts-1")
+					$("<div class='conent'>").html($("<a href="+data.N5buy+" class='buy-btn'>")).appendTo(".n5-parts-1").click(function(){
+						alert("网页还在开发中")
+					})
 				}
 			});
 		</script>

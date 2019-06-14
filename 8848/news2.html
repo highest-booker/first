@@ -8,16 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="css/top.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/N5.min.css" />
 		<style type="text/css">
-			.conent {
-				height: 696px;
-			}
-			
-			.buy-btn {
-				width: 196px;
-				height: 67px;
-				left: 756px;
-				top: 349px;
-			}
+			.conent{height:696px;}
+			.buy-btn{width:196px;height:67px;left:756px;top:349px;}
 		</style>
 	</head>
 	<body>
@@ -59,6 +51,23 @@
 				<div class="customer-qrcode"> <img src="http://www.8848phone.com/public/m3/images/customer_qrcode.png?ver=2"> </div>
 			</div>
 		</div>
+		<div class="gray-bg"></div>
+		<div class="denglu">
+			<div class="inset">
+				<div class="login-head">
+					<h1>登录</h1>
+					<div class="close"></div>
+				</div>
+				<div class="indi">
+					<input maxlength="8" placeholder="账号" autofocus>
+				</div>
+				<div class="indi">
+					<input maxlength="10" type="password" placeholder="密码">
+				</div>
+				<button class="wwc lll">登录</button>
+				<button class="wwc ccc">注册</button>
+			</div>
+		</div>
 		<script src="js/top.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/N5.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
@@ -75,7 +84,9 @@
 						}).appendTo(".N52")
 					})
 					$("<div class='conent'>").appendTo(".n5-parts-wcp-7")
-					$("<a class='buy-btn'>").attr("href", data.N5buy).appendTo(".conent")
+					$("<a class='buy-btn'>").attr("href", data.N5buy).appendTo(".conent").click(function(){
+						alert("网页还在开发中")
+					})
 				}
 			})
 		</script>
